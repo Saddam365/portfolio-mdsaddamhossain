@@ -1,0 +1,621 @@
+/* ========================================================================
+   COMPONENTS.CSS — Reusable UI Components
+   Portfolio of Md. Saddam Hossain
+   ======================================================================== */
+
+/* ========================================================================
+   Loading Screen
+   ======================================================================== */
+#loading {
+	position: fixed;
+	inset: 0;
+	background: var(--bg-primary);
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loader {
+	text-align: center;
+}
+
+.loader__dots {
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+}
+
+.loader__dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: var(--primary);
+	animation: pulse 1.2s infinite;
+}
+
+.loader__dot:nth-child(2) {
+	animation-delay: 0.15s;
+	background: var(--accent);
+}
+
+.loader__dot:nth-child(3) {
+	animation-delay: 0.3s;
+}
+
+.loader__text {
+	color: var(--text-muted);
+	font-size: 0.9rem;
+	letter-spacing: 1px;
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(1.4);
+		opacity: 0.5;
+	}
+}
+
+/* ========================================================================
+   Scroll Progress Bar
+   ======================================================================== */
+#scrollProgress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 3px;
+	background: var(--gradient-primary);
+	width: 0%;
+	z-index: 10001;
+	transition: width 0.1s;
+}
+
+/* ========================================================================
+   Navbar
+   ======================================================================== */
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	padding: 1.25rem 0;
+	transition: all var(--transition-base);
+}
+
+.navbar.scrolled {
+	background: var(--bg-glass);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	padding: 0.75rem 0;
+	border-bottom: 1px solid var(--border-color);
+	box-shadow: var(--shadow-sm);
+}
+
+.navbar__inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* ----- Brand ----- */
+.navbar__brand {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	text-decoration: none;
+	color: var(--text-primary);
+	font-weight: 700;
+	font-size: 1.35rem;
+}
+
+.navbar__brand-icon {
+	width: 32px;
+	height: 32px;
+	background: var(--gradient-primary);
+	border-radius: 8px;
+	position: relative;
+	overflow: hidden;
+}
+
+.navbar__brand-icon::after {
+	content: "";
+	position: absolute;
+	inset: 4px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 4px;
+}
+
+/* ----- Menu ----- */
+.navbar__menu {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.navbar__link {
+	color: var(--text-muted);
+	font-weight: 500;
+	font-size: 0.9rem;
+	transition: color var(--transition-fast);
+	position: relative;
+}
+
+.navbar__link:hover {
+	color: var(--text-primary);
+}
+
+.navbar__link.active {
+	color: var(--primary);
+}
+
+.navbar__link.active::after {
+	content: "";
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: var(--primary);
+	border-radius: 1px;
+	transition: width var(--transition-base);
+}
+
+/* ----- Actions ----- */
+.navbar__actions {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+/* ----- Theme Toggle ----- */
+.theme-toggle {
+	width: 40px;
+	height: 40px;
+	border-radius: var(--radius-full);
+	border: 1px solid var(--border-color);
+	background: transparent;
+	color: var(--text-secondary);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all var(--transition-base);
+	font-size: 1rem;
+}
+
+.theme-toggle:hover {
+	border-color: var(--border-hover);
+	color: var(--primary);
+}
+
+/* ----- Hamburger (Mobile) ----- */
+.navbar__hamburger {
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 4px;
+	width: 28px;
+}
+
+.navbar__hamburger span {
+	display: block;
+	height: 2px;
+	background: var(--text-primary);
+	border-radius: 2px;
+	transition: all var(--transition-base);
+}
+
+.navbar__hamburger.open span:nth-child(1) {
+	transform: rotate(45deg) translateY(7px);
+}
+
+.navbar__hamburger.open span:nth-child(2) {
+	opacity: 0;
+}
+
+.navbar__hamburger.open span:nth-child(3) {
+	transform: rotate(-45deg) translateY(-7px);
+}
+
+/* ----- Mobile Overlay ----- */
+.mobile-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 998;
+	opacity: 0;
+	visibility: hidden;
+	transition: all var(--transition-base);
+}
+
+.mobile-overlay.open {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* ========================================================================
+   Buttons
+   ======================================================================== */
+.btn {
+	padding: 12px 28px;
+	border-radius: var(--radius-md);
+	font-weight: 600;
+	font-size: 0.9rem;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+	transition: all var(--transition-base);
+	border: none;
+	text-decoration: none;
+}
+
+/* Primary */
+.btn--primary {
+	background: var(--gradient-primary);
+	color: #ffffff;
+	box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
+}
+
+.btn--primary:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.4);
+}
+
+/* Outline */
+.btn--outline {
+	background: transparent;
+	color: var(--text-primary);
+	border: 2px solid var(--border-color);
+}
+
+.btn--outline:hover {
+	border-color: var(--primary);
+	color: var(--primary);
+}
+
+/* Ghost */
+.btn--ghost {
+	background: rgba(var(--primary-rgb), 0.08);
+	color: var(--primary);
+}
+
+.btn--ghost:hover {
+	background: rgba(var(--primary-rgb), 0.15);
+}
+
+/* Small */
+.btn--sm {
+	padding: 8px 18px;
+	font-size: 0.85rem;
+}
+
+/* ========================================================================
+   Glass Card
+   ======================================================================== */
+.glass-card {
+	background: var(--bg-glass);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius-lg);
+	transition: all var(--transition-base);
+}
+
+.glass-card:hover {
+	border-color: var(--border-hover);
+	box-shadow: var(--shadow-md);
+}
+
+/* ========================================================================
+   Badge
+   ======================================================================== */
+.badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 4px 12px;
+	border-radius: var(--radius-full);
+	font-size: 0.75rem;
+	font-weight: 600;
+}
+
+.badge--primary {
+	background: rgba(var(--primary-rgb), 0.15);
+	color: var(--primary);
+}
+
+.badge--accent {
+	background: rgba(245, 158, 11, 0.15);
+	color: var(--accent);
+}
+
+/* ========================================================================
+   Timeline (Experience & Education)
+   ======================================================================== */
+.timeline {
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.timeline::before {
+	content: "";
+	position: absolute;
+	left: 15px;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	background: var(--border-color);
+}
+
+/* ----- Item ----- */
+.timeline__item {
+	position: relative;
+	padding-left: 48px;
+	margin-bottom: 2.5rem;
+}
+
+.timeline__item:last-child {
+	margin-bottom: 0;
+}
+
+/* ----- Dot ----- */
+.timeline__dot {
+	position: absolute;
+	left: 8px;
+	top: 8px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: var(--primary);
+	border: 3px solid var(--bg-primary);
+	z-index: 1;
+	box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.2);
+}
+
+/* ----- Content Card ----- */
+.timeline__content {
+	background: var(--bg-glass);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius-lg);
+	padding: 2rem;
+	transition: all var(--transition-base);
+}
+
+.timeline__content:hover {
+	border-color: var(--border-hover);
+	box-shadow: var(--shadow-md);
+}
+
+/* ----- Header ----- */
+.timeline__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.timeline__duration {
+	color: var(--primary);
+	font-weight: 600;
+	font-size: 0.85rem;
+}
+
+.timeline__title {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: var(--text-primary);
+}
+
+.timeline__subtitle {
+	color: var(--text-muted);
+	font-size: 0.9rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 0.75rem;
+}
+
+.timeline__subtitle i {
+	color: var(--primary);
+	font-size: 0.85rem;
+}
+
+/* ----- Description & List ----- */
+.timeline__desc {
+	color: var(--text-secondary);
+	font-size: 0.95rem;
+	line-height: 1.7;
+}
+
+.timeline__list {
+	list-style: none;
+	padding: 0;
+}
+
+.timeline__list li {
+	position: relative;
+	padding-left: 1.25rem;
+	margin-bottom: 0.5rem;
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+	line-height: 1.6;
+}
+
+.timeline__list li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--primary-light);
+}
+
+/* ========================================================================
+   Skill Tag
+   ======================================================================== */
+.skill-tag {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 8px 16px;
+	background: var(--bg-tertiary);
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius-full);
+	font-size: 0.85rem;
+	font-weight: 500;
+	color: var(--text-primary);
+	transition: all var(--transition-base);
+}
+
+.skill-tag:hover {
+	border-color: var(--primary);
+	color: var(--primary);
+	transform: translateY(-1px);
+}
+
+.skill-tag i {
+	color: var(--primary);
+	font-size: 0.9rem;
+}
+
+/* ========================================================================
+   Tech Tag (Projects)
+   ======================================================================== */
+.tech-tag {
+	padding: 4px 10px;
+	background: rgba(var(--primary-rgb), 0.1);
+	color: var(--primary-light);
+	border-radius: var(--radius-sm);
+	font-size: 0.75rem;
+	font-weight: 500;
+}
+
+/* ========================================================================
+   Back to Top
+   ======================================================================== */
+.back-to-top {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	width: 44px;
+	height: 44px;
+	background: var(--gradient-primary);
+	color: #ffffff;
+	border-radius: var(--radius-full);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	opacity: 0;
+	visibility: hidden;
+	transition: all var(--transition-base);
+	z-index: 100;
+	box-shadow: var(--shadow-md);
+}
+
+.back-to-top.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+.back-to-top:hover {
+	transform: translateY(-3px);
+	box-shadow: var(--shadow-lg);
+}
+
+/* ========================================================================
+   Form Elements
+   ======================================================================== */
+.form-group {
+	margin-bottom: 1rem;
+}
+
+.form-group__label {
+	display: block;
+	font-size: 0.85rem;
+	font-weight: 500;
+	color: var(--text-secondary);
+	margin-bottom: 0.5rem;
+}
+
+.form-group__input {
+	width: 100%;
+	padding: 12px 16px;
+	background: var(--bg-tertiary);
+	border: 1px solid var(--border-color);
+	border-radius: var(--radius-md);
+	color: var(--text-primary);
+	font-family: inherit;
+	font-size: 0.95rem;
+	transition: all var(--transition-base);
+}
+
+.form-group__input:focus {
+	outline: none;
+	border-color: var(--primary);
+	box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.15);
+}
+
+textarea.form-group__input {
+	resize: vertical;
+	min-height: 120px;
+}
+
+/* ========================================================================
+   Scroll-Reveal Animations
+   ======================================================================== */
+[data-reveal] {
+	opacity: 0;
+	transform: translateY(24px);
+	transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-reveal="left"] {
+	transform: translateX(-24px);
+}
+
+[data-reveal="right"] {
+	transform: translateX(24px);
+}
+
+[data-reveal="scale"] {
+	transform: scale(0.95);
+}
+
+[data-reveal].revealed {
+	opacity: 1;
+	transform: translate(0) scale(1);
+}
+
+/* ----- Stagger Delays ----- */
+[data-reveal-delay="1"] {
+	transition-delay: 0.1s;
+}
+
+[data-reveal-delay="2"] {
+	transition-delay: 0.2s;
+}
+
+[data-reveal-delay="3"] {
+	transition-delay: 0.3s;
+}
+
+[data-reveal-delay="4"] {
+	transition-delay: 0.4s;
+}

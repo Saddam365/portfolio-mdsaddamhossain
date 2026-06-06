@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Portfolio of Md. Saddam Hossain — Industry professional with 18+ years of experience in Printing & IT, pursuing B.Sc in Computer Science & Engineering." />
+		<meta
+			name="keywords"
+			content="Md. Saddam Hossain, Portfolio, Printing Technology, Computer Science, CSE, IT Professional" />
+
+		<!-- Open Graph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Md. Saddam Hossain — Professional Portfolio" />
+		<meta
+			property="og:description"
+			content="Industry professional with 18+ years of experience in Printing & IT." />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Md. Saddam Hossain — Professional Portfolio" />
+
+		<title>Md. Saddam Hossain — Professional Portfolio</title>
+
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Md. Saddam Hossain",
+				"jobTitle": "IT & Printing Technology Professional",
+				"description": "Industry professional with 8+ years of experience",
+				"address": {
+					"@type": "PostalAddress",
+					"addressLocality": "Dhaka",
+					"addressCountry": "BD"
+				}
+			}
+		</script>
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet" />
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/layout.css" />
+		<link rel="stylesheet" href="css/components.css" />
+		<link rel="stylesheet" href="css/sections.css" />
+		<link rel="stylesheet" href="css/responsive.css" />
+	</head>
+	<body>
+		<!-- ============================================================
+       1. LOADING SCREEN
+       ============================================================ -->
+		<div id="loading" aria-hidden="true">
+			<div class="loader">
+				<div class="loader__dots">
+					<span class="loader__dot"></span>
+					<span class="loader__dot"></span>
+					<span class="loader__dot"></span>
+				</div>
+				<p class="loader__text">Loading portfolio...</p>
+			</div>
+		</div>
+
+		<!-- ============================================================
+       2. SCROLL PROGRESS INDICATOR
+       ============================================================ -->
+		<div id="scrollProgress" aria-hidden="true"></div>
+
+		<!-- ============================================================
+       3. NAVBAR
+       ============================================================ -->
+		<header class="navbar" id="navbar">
+			<div class="container navbar__inner">
+				<a class="navbar__brand" href="#home" aria-label="Home">
+					<span class="navbar__brand-icon" aria-hidden="true"></span>
+					<span>Saddam</span>
+				</a>
+				<nav class="navbar__menu" id="navMenu" aria-label="Main navigation">
+					<a class="navbar__link active" href="#home">Home</a>
+					<a class="navbar__link" href="#about">About</a>
+					<a class="navbar__link" href="#experience">Experience</a>
+					<a class="navbar__link" href="#education">Education</a>
+					<a class="navbar__link" href="#skills">Skills</a>
+					<a class="navbar__link" href="#projects">Projects</a>
+					<a class="navbar__link" href="#contact">Contact</a>
+				</nav>
+				<div class="navbar__actions">
+					<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" type="button">
+						<i class="fa-solid fa-moon"></i>
+					</button>
+					<a class="btn btn--primary btn--sm" href="#contact">Let's Talk</a>
+					<button
+						class="navbar__hamburger"
+						id="navHamburger"
+						aria-label="Open menu"
+						aria-expanded="false"
+						type="button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<!-- Mobile navigation overlay -->
+		<div class="mobile-overlay" id="mobileOverlay"></div>
+
+		<!-- ============================================================
+       4. HERO SECTION
+       ============================================================ -->
+		<main>
+			<section id="home" class="hero">
+				<!-- Decorative background elements -->
+				<div class="hero__bg" aria-hidden="true">
+					<div class="hero__blob hero__blob--1"></div>
+					<div class="hero__blob hero__blob--2"></div>
+					<div class="hero__grid-pattern"></div>
+				</div>
+
+				<div class="container hero__content">
+					<!-- Hero Text Block -->
+					<div class="hero__text" data-reveal>
+						<div class="hero__badge">
+							<span class="badge badge--primary">
+								<i
+									class="fa-solid fa-circle"
+									style="
+										font-size: 6px;
+										vertical-align: middle;
+										margin-right: 6px;
+										color: #22c55e;
+									"></i>
+								Available for Opportunities
+							</span>
+						</div>
+						<h1 class="hero__title">Md. Saddam Hossain</h1>
+						<div class="hero__typing">
+							<span id="typingText" aria-label="Professional titles"></span>
+							<span class="typing-cursor" aria-hidden="true">|</span>
+						</div>
+						<p class="hero__summary">
+							Industry professional with
+							<strong>18+ years of experience</strong>
+							in Printing Technology and IT. Currently pursuing a B.Sc in Computer Science & Engineering,
+							combining hands-on industry expertise with modern technical skills to deliver practical,
+							high-quality solutions.
+						</p>
+
+						<!-- Key Statistics -->
+						<div class="hero__stats">
+							<div class="stat-item">
+								<span class="stat-item__number" data-count="18">0</span>
+								<span class="stat-item__label">Years Experience</span>
+							</div>
+							<div class="stat-item">
+								<span class="stat-item__number" data-count="2">0</span>
+								<span class="stat-item__label">Professional Roles</span>
+							</div>
+							<div class="stat-item">
+								<span class="stat-item__number" data-count="10">0</span>
+								<span class="stat-item__label">Projects Delivered</span>
+							</div>
+						</div>
+
+						<!-- Call to Action Buttons -->
+						<div class="hero__cta">
+							<a class="btn btn--primary" href="#projects">
+								<i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+								<span>View My Work</span>
+							</a>
+							<a class="btn btn--outline" href="#contact">
+								<i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+								<span>Contact Me</span>
+							</a>
+							<a class="btn btn--ghost" href="assets/Resume.pdf" download="Resume.pdf" title="Download Resume">
+								<i class="fa-solid fa-download" aria-hidden="true"></i>
+								<span>Resume</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- Hero Visual / Photo Frame -->
+					<div class="hero__visual" data-reveal="scale">
+						<div class="hero__image-frame">
+							<img class="hero__image" src="assets/images/saddam.jpg" alt="Md. Saddam Hossain — Professional Portrait" loading="lazy">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============================================================
+         5. ABOUT SECTION
+         ============================================================ -->
+			<section id="about" class="section">
+				<div class="container">
+					<div class="section-header" data-reveal>
+						<span class="section-header__tag">Get To Know Me</span>
+						<h2 class="section-header__title">About Me</h2>
+						<p class="section-header__subtitle">Professional profile and career summary</p>
+					</div>
+					<div class="about__content">
+						<!-- Bio / Narrative -->
+						<div class="about__bio" data-reveal="left">
+							<p>
+								I am a dedicated industry professional with over 18 years of progressive experience in
+								the Printing Technology and IT sectors. My career journey reflects a steady growth from
+								foundational technical roles to senior-level responsibilities, backed by a strong
+								commitment to quality and continuous learning.
+							</p>
+							<p>
+								Currently pursuing a B.Sc in Computer Science & Engineering at Bangladesh University, I
+								bring a unique blend of practical industry knowledge and modern computing skills. My
+								background in Printing Technology, combined with professional certifications in hardware
+								and networking, allows me to bridge the gap between traditional industry and digital
+								innovation.
+							</p>
+							<div class="about__location">
+								<i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+								<span>Dhaka, Bangladesh</span>
+							</div>
+						</div>
+						<!-- Highlight Cards -->
+						<div class="about__highlights" data-reveal="right">
+							<div class="highlight-card">
+								<div class="highlight-card__icon">
+									<i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+								</div>
+								<h3>CSE Degree</h3>
+								<p>Bangladesh University</p>
+							</div>
+							<div class="highlight-card">
+								<div class="highlight-card__icon">
+									<i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+								</div>
+								<h3>18+ Years</h3>
+								<p>Industry Experience</p>
+							</div>
+							<div class="highlight-card">
+								<div class="highlight-card__icon">
+									<i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+								</div>
+								<h3>2 Roles</h3>
+								<p>Career Progression</p>
+							</div>
+							<div class="highlight-card">
+								<div class="highlight-card__icon">
+									<i class="fa-solid fa-certificate" aria-hidden="true"></i>
+								</div>
+								<h3>A+ Certified</h3>
+								<p>Professional Training</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============================================================
+         6. EXPERIENCE SECTION (MOST IMPORTANT)
+         ============================================================ -->
+			<section id="experience" class="section section--alt">
+				<div class="container">
+					<div class="section-header" data-reveal>
+						<span class="section-header__tag">Career Journey</span>
+						<h2 class="section-header__title">Work Experience</h2>
+						<p class="section-header__subtitle">18+ years of professional growth and industry expertise</p>
+					</div>
+					<!-- <div class="timeline"> -->
+					<!-- Role 2 — Current / Senior -->
+					<!-- <div class="timeline__item" data-reveal>
+            <div class="timeline__dot"></div>
+            <div class="timeline__content glass-card">
+              <div class="timeline__header">
+                <span class="badge badge--accent">Current Role</span>
+                <span class="timeline__duration"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2022 — Present</span>
+              </div>
+              <h3 class="timeline__title">Senior Executive</h3>
+              <p class="timeline__subtitle"><i class="fa-solid fa-building" aria-hidden="true"></i> Your Company Name</p>
+              <ul class="timeline__list">
+                <li>Led and managed key operational processes, ensuring quality and efficiency across departments</li>
+                <li>Implemented process improvements that enhanced productivity and reduced operational costs</li>
+                <li>Mentored junior team members and contributed to team development initiatives</li>
+                <li>Coordinated with cross-functional teams to deliver projects on time and within scope</li>
+              </ul>
+            </div>
+          </div> -->
+					<!-- Role 1 — Earlier -->
+					<!-- <div class="timeline__item" data-reveal>
+            <div class="timeline__dot"></div>
+            <div class="timeline__content glass-card">
+              <div class="timeline__header">
+                <span class="badge badge--primary">Previous Role</span>
+                <span class="timeline__duration"><i class="fa-regular fa-calendar" aria-hidden="true"></i> 2018 — 2022</span>
+              </div>
+              <h3 class="timeline__title">Executive</h3>
+              <p class="timeline__subtitle"><i class="fa-solid fa-building" aria-hidden="true"></i> Your Company Name</p>
+              <ul class="timeline__list">
+                <li>Managed day-to-day operations and maintained high standards of work quality</li>
+                <li>Developed technical skills in printing production and IT infrastructure</li>
+                <li>Assisted in the adoption of new technologies and digital workflows</li>
+                <li>Built strong professional relationships with clients and stakeholders</li>
+              </ul>
+            </div>
+          </div> -->
+					<!-- </div> -->
+
+					<div class="timeline">
+						<!-- Role 2 — Current -->
+						<div class="timeline__item" data-reveal>
+							<div class="timeline__dot"></div>
+							<div class="timeline__content glass-card">
+								<div class="timeline__header">
+									<span class="badge badge--accent">Current Role</span>
+									<span class="timeline__duration">
+										<i class="fa-regular fa-calendar" aria-hidden="true"></i>
+										2016 — Present
+									</span>
+								</div>
+
+								<h3 class="timeline__title">Hardware Engineer</h3>
+
+								<p class="timeline__subtitle">
+									<i class="fa-solid fa-building" aria-hidden="true"></i>
+									Bright River Bangladesh Ltd.
+								</p>
+
+								<ul class="timeline__list">
+									<li>
+										Diagnosed, maintained, and repaired computer hardware and peripheral devices to
+										ensure uninterrupted operations
+									</li>
+									<li>
+										Installed, configured, and upgraded hardware systems, improving overall
+										performance and reliability
+									</li>
+									<li>
+										Troubleshot technical issues related to workstations, printers, and
+										network-connected devices
+									</li>
+									<li>
+										Collaborated with internal teams to support IT infrastructure and maintain
+										operational efficiency
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- Role 1 — Earlier -->
+						<div class="timeline__item" data-reveal>
+							<div class="timeline__dot"></div>
+							<div class="timeline__content glass-card">
+								<div class="timeline__header">
+									<span class="badge badge--primary">Previous Role</span>
+									<span class="timeline__duration">
+										<i class="fa-regular fa-calendar" aria-hidden="true"></i>
+										2008 — 2016
+									</span>
+								</div>
+
+								<h3 class="timeline__title">IT Executive</h3>
+
+								<p class="timeline__subtitle">
+									<i class="fa-solid fa-building" aria-hidden="true"></i>
+									Bright River Bangladesh Ltd.
+								</p>
+
+								<ul class="timeline__list">
+									<li>
+										Managed day-to-day IT operations and ensured smooth functioning of computer
+										systems and office technology
+									</li>
+									<li>
+										Provided technical support and troubleshooting for hardware, software, and
+										network-related issues
+									</li>
+									<li>
+										Maintained IT infrastructure, including system setup, upgrades, and preventive
+										maintenance
+									</li>
+									<li>
+										Assisted teams in adopting digital tools and improving workflow efficiency
+										through technical solutions
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- Total Experience Banner -->
+					<div class="experience__total" data-reveal>
+						<i class="fa-solid fa-trophy" aria-hidden="true" style="color: var(--accent)"></i>
+						<span>
+							Total Experience:
+							<strong>18+ Years</strong>
+							at the same organization — demonstrating loyalty, growth, and deep expertise.
+						</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============================================================
+         7. EDUCATION SECTION
+         ============================================================ -->
+			<section id="education" class="section">
+				<div class="container">
+					<div class="section-header" data-reveal>
+						<span class="section-header__tag">Academic Background</span>
+						<h2 class="section-header__title">Education</h2>
+						<p class="section-header__subtitle">My academic journey and qualifications</p>
+					</div>
+					<div class="timeline">
+						<!-- B.Sc CSE — In Progress -->
+						<div class="timeline__item" data-reveal>
+							<div class="timeline__dot"></div>
+							<div class="timeline__content glass-card">
+								<div class="timeline__header">
+									<span class="badge badge--accent">In Progress</span>
+									<span class="timeline__duration">
+										<i class="fa-regular fa-calendar" aria-hidden="true"></i>
+										Currently Pursuing
+									</span>
+								</div>
+								<h3 class="timeline__title">B.Sc in Computer Science & Engineering</h3>
+								<p class="timeline__subtitle">
+									<i class="fa-solid fa-university" aria-hidden="true"></i>
+									Bangladesh University
+								</p>
+								<p class="timeline__desc">
+									Building a strong foundation in software engineering, algorithms, data structures,
+									and modern computing principles.
+								</p>
+							</div>
+						</div>
+						<!-- Diploma in Printing Technology -->
+						<div class="timeline__item" data-reveal>
+							<div class="timeline__dot"></div>
+							<div class="timeline__content glass-card">
+								<div class="timeline__header">
+									<span class="badge badge--primary">Completed</span>
+									<span class="timeline__duration">
+										<i class="fa-regular fa-calendar" aria-hidden="true"></i>
+										Graduated
+									</span>
+								</div>
+								<h3 class="timeline__title">Diploma in Engineering — Printing Technology</h3>
+								<p class="timeline__subtitle">
+									<i class="fa-solid fa-university" aria-hidden="true"></i>
+									Graphic Arts Institute
+								</p>
+								<p class="timeline__desc">
+									Specialized in modern printing techniques, graphic reproduction, color management,
+									and production workflows.
+								</p>
+							</div>
+						</div>
+						<!-- SSC -->
+						<div class="timeline__item" data-reveal>
+							<div class="timeline__dot"></div>
+							<div class="timeline__content glass-card">
+								<div class="timeline__header">
+									<span class="badge badge--primary">Completed</span>
+									<span class="timeline__duration">
+										<i class="fa-regular fa-calendar" aria-hidden="true"></i>
+										Graduated
+									</span>
+								</div>
+								<h3 class="timeline__title">SSC — Arts</h3>
+								<p class="timeline__subtitle">
+									<i class="fa-solid fa-school" aria-hidden="true"></i>
+									West End High School
+								</p>
+								<p class="timeline__desc">
+									Secondary School Certificate with a focus on humanities and foundational studies.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============================================================
+         8. CERTIFICATIONS SECTION
+         ============================================================ -->
+			<section id="certifications" class="section section--alt">
+				<div class="container">
+					<div class="section-header" data-reveal>
+						<span class="section-header__tag">Professional Development</span>
+						<h2 class="section-header__title">Certifications & Training</h2>
+						<p class="section-header__subtitle">Professional courses and industry certifications</p>
+					</div>
+					<div class="cert-card glass-card" data-reveal>
+						<div class="cert-card__icon">
+							<i class="fa-solid fa-award" aria-hidden="true"></i>
+						</div>
+						<div class="cert-card__info">
+							<h3>CompTIA A+ Training</h3>
+							<p>
+								Comprehensive training in computer hardware, troubleshooting, networking essentials, and
+								IT infrastructure management.
+							</p>
+							<div class="cert-card__meta">
+								<span>
+									<i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+									New Horizons Dhaka
+								</span>
+								<span>
+									<i class="fa-solid fa-tag" aria-hidden="true"></i>
+									Hardware & Networking
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============================================================
+         9. SKILLS SECTION
+         ============================================================ -->
+			<section id="skills" class="section">
+				<div class="container">
+					<div class="section-header" data-reveal>
+						<span class="section-header__tag">Technical Expertise</span>
+						<h2 class="section-header__title">Skills</h2>
+						<p class="section-header__subtitle">Technologies and competencies I work with</p>
+					</div>
+					<div class="skills__grid">
+						<!-- Core Technical -->
+						<div class="skill-category" data-reveal data-reveal-delay="1">
+							<h3 class="skill-category__title">
+								<i class="fa-solid fa-microchip" aria-hidden="true"></i>
+								Core Technical
+							</h3>
+							<div class="skill-category__tags">
+								<span class="skill-tag">
+									<i class="fa-solid fa-print" aria-hidden="true"></i>
+									Printing Technology
+								</span>
+								<span class="skill-tag">
+									<i class="fa-solid fa-server" aria-hidden="true"></i>
+									Computer Hardware
+								</span>
+								<span class="skill-tag">
+									<i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+									Networking
+								</span>
+								<span class="skill-tag">
+									<i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+									Troubleshooting
+								</span>
+							</div>
+						</div>
+						<!-- Development -->
+						<div class="skill-category" data-reveal data-reveal-delay="2">
+							<h3 class="skill-category__title">
+								<i class="fa-solid fa-code" aria-hidden="true"></i>
+								Development
+							</h3>
+							<div class="skill-category__tags">
+								<span class="skill-tag">
+									<i class="fa-brands fa-html5" aria-hidden="true"></i>
+									HTML
+								</span>
+								<span class="skill-tag">
+									<i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+									CSS
+								</span>
+								<span class="skill-tag">
+									<i class="fa-brands fa-js" aria-hidden="true"></i>
+									JavaScript
+								</span>
+								<span class="skill-tag">
+									<i class="fa-solid fa-terminal" aria-hidden="true"></i>
+									Problem Solving
+								</span>
+							</div>
+						</div>
+						<!-- Design & Media -->
+						<div class="skill-category" data-reveal data-reveal-delay="3">
+							<h3 class="skill-category__title">
+								<i class="fa-solid fa-palette" aria-hidden="true"></i>
+								Design & Media
+							</h3>
+							<div class="skill-category__tags">
+								<span class="skill-tag">
+									<i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
+									Graphic Design
+								</span>
+								<span class="skill-tag">
+									<i class="fa-solid fa-swatchbook" aria-hidden="true"></i>
+									Color Management
+								</span>
+								<span class="skill-tag">
+									<i class="fa-solid fa-image" aria-hidden="true"></i>
+									Pre-Press
+								</span>
+								<span class="skill-tag">
+									<i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+									Digital Media
+								</span>
+							</div>
+						</div>
+						<!-- Professional -->
+						<div class="skill-category" data-reveal data-reveal-delay="4">
+							<h3 class="skill-category__title">
+								<i class="fa-solid fa-users" aria-hidden="true"></i>
+								Professional
+							</h3>
+							<div class="skill-category__tags">
+								<span class="skill-tag">
+									<i class="fa-solid fa-people-group" aria-hidden="true"></i>
+									Team Leadership
+								</span>
+								<span class="skill-tag">
+									<i class="fa-solid fa-comments" aria-hidden="true"></i>
+									Communication
+								</span>
+								<span class="skill-tag">
+									<i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+									Project Management
+								</span>
+								<span class="skill-tag">
+									<i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
+									Problem Solving
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============================================================
+         10. PROJECTS SECTION
+         ============================================================ -->
+			<section id="projects" class="section section--alt">
+				<div class="container">
+					<div class="section-header" data-reveal>
+						<span class="section-header__tag">My Work</span>
+						<h2 class="section-header__title">Projects</h2>
+						<p class="section-header__subtitle">Selected projects showcasing my skills and experience</p>
+					</div>
+					<div class="projects__grid">
+						<!-- Project 1: Portfolio Website -->
+						<div class="project-card" data-reveal data-reveal-delay="1">
+							<div class="project-card__image">
+								<i class="fa-solid fa-globe" aria-hidden="true"></i>
+							</div>
+							<div class="project-card__body">
+								<h3 class="project-card__title">Portfolio Website</h3>
+								<p class="project-card__desc">
+									A modern, responsive personal portfolio website built with clean HTML, CSS, and
+									JavaScript. Features dark mode, smooth animations, and mobile-first design.
+								</p>
+								<div class="project-card__tech">
+									<span class="tech-tag">HTML</span>
+									<span class="tech-tag">CSS</span>
+									<span class="tech-tag">JavaScript</span>
+								</div>
+								<div class="project-card__links">
+									<a href="#" target="_blank" rel="noopener">
+										<i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>
+										Live Demo
+									</a>
+									<a href="#" target="_blank" rel="noopener">
+										<i class="fa-brands fa-github" aria-hidden="true"></i>
+										Source Code
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- Project 2: Print Production Manager -->
+						<div class="project-card" data-reveal data-reveal-delay="2">
+							<div class="project-card__image">
+								<i class="fa-solid fa-print" aria-hidden="true"></i>
+							</div>
+							<div class="project-card__body">
+								<h3 class="project-card__title">Print Production Manager</h3>
+								<p class="project-card__desc">
+									A workflow management tool designed for printing production environments. Helps
+									track job orders, manage deadlines, and optimize production schedules.
+								</p>
+								<div class="project-card__tech">
+									<span class="tech-tag">HTML</span>
+									<span class="tech-tag">CSS</span>
+									<span class="tech-tag">JavaScript</span>
+								</div>
+								<div class="project-card__links">
+									<a href="#" target="_blank" rel="noopener">
+										<i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>
+										Live Demo
+									</a>
+									<a href="#" target="_blank" rel="noopener">
+										<i class="fa-brands fa-github" aria-hidden="true"></i>
+										Source Code
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- Project 3: IT Inventory System -->
+						<div class="project-card" data-reveal data-reveal-delay="3">
+							<div class="project-card__image">
+								<i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+							</div>
+							<div class="project-card__body">
+								<h3 class="project-card__title">IT Inventory System</h3>
+								<p class="project-card__desc">
+									A lightweight inventory tracking system for computer hardware and networking
+									equipment. Features search, categorization, and status tracking.
+								</p>
+								<div class="project-card__tech">
+									<span class="tech-tag">HTML</span>
+									<span class="tech-tag">CSS</span>
+									<span class="tech-tag">JavaScript</span>
+								</div>
+								<div class="project-card__links">
+									<a href="#" target="_blank" rel="noopener">
+										<i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>
+										Live Demo
+									</a>
+									<a href="#" target="_blank" rel="noopener">
+										<i class="fa-brands fa-github" aria-hidden="true"></i>
+										Source Code
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============================================================
+         11. CONTACT SECTION
+         ============================================================ -->
+			<section id="contact" class="section">
+				<div class="container">
+					<div class="section-header" data-reveal>
+						<span class="section-header__tag">Get In Touch</span>
+						<h2 class="section-header__title">Contact Me</h2>
+						<p class="section-header__subtitle">
+							Feel free to reach out for collaborations, opportunities, or inquiries
+						</p>
+					</div>
+					<div class="contact__grid">
+						<!-- Contact Information -->
+						<div class="contact__info" data-reveal="left">
+							<div class="contact-item">
+								<div class="contact-item__icon">
+									<i class="fa-solid fa-phone" aria-hidden="true"></i>
+								</div>
+								<div>
+									<h4>Phone</h4>
+									<a href="tel:+8801706913701">+880 1706-913701</a>
+								</div>
+							</div>
+							<div class="contact-item">
+								<div class="contact-item__icon">
+									<i class="fa-solid fa-envelope" aria-hidden="true"></i>
+								</div>
+								<div>
+									<h4>Email</h4>
+									<a href="mailto:profilestop@gmail.com">profilestop@gmail.com</a>
+								</div>
+							</div>
+							<div class="contact-item">
+								<div class="contact-item__icon">
+									<i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+								</div>
+								<div>
+									<h4>Location</h4>
+									<p>Dhaka, Bangladesh</p>
+								</div>
+							</div>
+							<div class="contact-item">
+								<div class="contact-item__icon">
+									<i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+								</div>
+								<div>
+									<h4>LinkedIn</h4>
+									<a href="https://www.linkedin.com/in/saddam365" target="_blank" rel="noopener">
+										Connect on LinkedIn
+									</a>
+								</div>
+							</div>
+							<div class="contact-item">
+								<div class="contact-item__icon">
+									<i class="fa-brands fa-github" aria-hidden="true"></i>
+								</div>
+								<div>
+									<h4>GitHub</h4>
+									<a href="https://github.com/Saddam365" target="_blank" rel="noopener">
+										View on GitHub
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- Contact Form -->
+						<div class="contact__form-card" data-reveal="right">
+							<h3>Send a Message</h3>
+							<p>Have a question or want to work together? Drop me a message.</p>
+							<form class="contact__form">
+								<div class="form-group">
+									<label class="form-group__label" for="contactName">Your Name</label>
+									<input
+										class="form-group__input"
+										type="text"
+										id="contactName"
+										placeholder="John Doe"
+										required />
+								</div>
+								<div class="form-group">
+									<label class="form-group__label" for="contactEmail">Your Email</label>
+									<input
+										class="form-group__input"
+										type="email"
+										id="contactEmail"
+										placeholder="john@example.com"
+										required />
+								</div>
+								<div class="form-group">
+									<label class="form-group__label" for="contactMessage">Your Message</label>
+									<textarea
+										class="form-group__input"
+										id="contactMessage"
+										placeholder="Tell me about your project or inquiry..."
+										rows="5"
+										required></textarea>
+								</div>
+								<button
+									type="submit"
+									class="btn btn--primary"
+									style="width: 100%; justify-content: center">
+									<i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+									<span>Send Message</span>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- ============================================================
+       12. FOOTER
+       ============================================================ -->
+		<footer class="footer">
+			<div class="container footer__inner">
+				<p class="footer__text">&copy; 2026 Md. Saddam Hossain. All rights reserved.</p>
+				<div class="footer__socials">
+					<a class="social-link" href="https://www.linkedin.com/in/saddam365" aria-label="LinkedIn" target="_blank" rel="noopener">
+						<i class="fa-brands fa-linkedin-in"></i>
+					</a>
+					<a class="social-link" href="https://github.com/Saddam365" aria-label="GitHub" target="_blank" rel="noopener">
+						<i class="fa-brands fa-github"></i>
+					</a>
+					<a class="social-link" href="mailto:profilestop@gmail.com" aria-label="Email">
+						<i class="fa-solid fa-envelope"></i>
+					</a>
+				</div>
+			</div>
+			<a class="back-to-top" href="#home" aria-label="Back to top">
+				<i class="fa-solid fa-chevron-up"></i>
+			</a>
+		</footer>
+
+		<!-- Scripts (loaded in dependency order) -->
+		<script src="js/theme.js"></script>
+		<script src="js/navigation.js"></script>
+		<script src="js/animations.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
